@@ -24,8 +24,8 @@ contract EZKaliburPair is IPair, UniswapV2ERC20 {
 
   uint112 private reserve0;           // uses single storage slot, accessible via getReserves
   uint112 private reserve1;           // uses single storage slot, accessible via getReserves
-  uint16 public token0FeePercent = 250; // default = 0.3%  // uses single storage slot, accessible via getReserves
-  uint16 public token1FeePercent = 250; // default = 0.3%  // uses single storage slot, accessible via getReserves
+  uint16 public token0FeePercent = 250; // default = 0.25%  // uses single storage slot, accessible via getReserves
+  uint16 public token1FeePercent = 250; // default = 0.25%  // uses single storage slot, accessible via getReserves
 
   uint public precisionMultiplier0;
   uint public precisionMultiplier1;
