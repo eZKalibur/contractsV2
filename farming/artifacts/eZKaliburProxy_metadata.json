@@ -1,0 +1,321 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [],
+				"name": "DisableWhitelist",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [],
+				"name": "EnableWhitelist",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "whitelist",
+						"type": "bool"
+					}
+				],
+				"name": "Whitelisted",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bool",
+						"name": "disable",
+						"type": "bool"
+					}
+				],
+				"name": "disableWhitelist",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract IBEP20",
+						"name": "_token",
+						"type": "address"
+					}
+				],
+				"name": "initialize",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "isWhitelist",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract IBEP20",
+						"name": "_token",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					}
+				],
+				"name": "recoverToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "safeMeerkatTransfer",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "_on",
+						"type": "bool"
+					}
+				],
+				"name": "setWhitelist",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"renounceOwnership()": {
+					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"farming/eZKaliburProxy.sol": "eZKaliburProxy"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"farming/access/OwnableUpgradeable.sol": {
+			"keccak256": "0x35db8908994222c1532d8f6f5728a4c554d5a18a86b88c20326b15c71f15b344",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ce847036ca35fdaa38ac8db4b977e5d6055a7a0e4a89c1303eafa0917c4cdcd8",
+				"dweb:/ipfs/QmbgbGxJQPS9EVCJBimSAqrx7HRnVyHJDNbBUDtDLc794E"
+			]
+		},
+		"farming/eZKaliburProxy.sol": {
+			"keccak256": "0x24f0f04a4f7c41bcb98f1e46d0ddddc889fbd45c73a0d65085af31e357f41ece",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f7407ea61858119ef7cd57f2c58dbafd6bc2d3f367893b87c7a4f53acad94672",
+				"dweb:/ipfs/QmT73MniLL8ePnNKeEWrFaQPTqUvEuWXttjqKZe5NtvQfe"
+			]
+		},
+		"farming/interfaces/IBEP20.sol": {
+			"keccak256": "0xe6555dcb6ec5cb9dcaf2322cf003a1e3d2257471768b32cdc433025a0bc3ac3d",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://a1f47d4071cfc9f31174526b1a63d0be2169a199f0a5b9819267d9d070adad6d",
+				"dweb:/ipfs/QmcmHiuPjMSXZLNubeScGkXvWAz6dM1cciv5zGPNJaK9Po"
+			]
+		},
+		"farming/library/SafeMath.sol": {
+			"keccak256": "0x61f7309b48f11de8884e26542b911fdff2534e899f212e34eb4e399e57a9c867",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7eb4cf168b5b3422ee4aafc518537e6341b26ae38d8e3b8d8c96f17e71fe6301",
+				"dweb:/ipfs/Qmes9Noj9pTL8zQ4hkZEFHYBdVgNjsn166fY4VqXQsMbDv"
+			]
+		},
+		"farming/library/WhitelistUpgradeable.sol": {
+			"keccak256": "0xe76cd48d6f9299378aab69c6550df2e83b014bfb26552e1480e7eec577da995e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://79d6b23fc270819f333aa2135eb4399a88ebcd951cb744e0fb55226c31846f01",
+				"dweb:/ipfs/Qma1GDgtiCLeegNQ2oYXfM9ErJpVw59CiA1J32nmHB4o9G"
+			]
+		},
+		"farming/proxy/Initializable.sol": {
+			"keccak256": "0x36379d565c892655822caa4d36d3f1eb920b2dcb1caa1b9068a7564153d4b64b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6b1c1628825f9e6b61c6429862a7db2698825298e2589e88c96373b3ec62b255",
+				"dweb:/ipfs/QmX2sobAuVwaKviRAzxuSfjzM76KTg8hGU8zQhFJubxtrC"
+			]
+		},
+		"farming/utils/Address.sol": {
+			"keccak256": "0xbe2939e35a126bed12382b07d3729489c3536aa84188af5682427877595b83ed",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4b77767cd892d4718296d8e8a52b6bd0167643d9c1e8e62099d33a650cfd040d",
+				"dweb:/ipfs/QmepRNrdk5r4FXffRf6nraTQPLqZidMYpZ6XTUBo8oVNrg"
+			]
+		},
+		"farming/utils/AddressUpgradeable.sol": {
+			"keccak256": "0x854adfa6df542c6522215a7048627f93b34c1c11a35d387b509e4160cb38aa51",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://917672309472a17d792ad1eb14e8e98cfe43cdc38259381080e1a5f396946705",
+				"dweb:/ipfs/QmZKDtkKTzi1FYKGsEnCR4kxLssKfE9w1Xxp4e56yNwRp2"
+			]
+		},
+		"farming/utils/ContextUpgradeable.sol": {
+			"keccak256": "0xebcd7eb909fdb72755f408a0490c3ecc4c3511967eaeda9126a48c8d22882a28",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://99224e5315f91eeac958d966274d2f6cd516ffe7f01717e9bff21c83163142b9",
+				"dweb:/ipfs/Qmc8bDabLMznf4YnbCvGxgf7hrQ1aEeNMAf7e78P6AC5gX"
+			]
+		},
+		"farming/utils/SafeBEP20.sol": {
+			"keccak256": "0x736b7df5455c6cffdc1d6dd17b9e3271441e326bff6052ae5afd32a0ba4848c8",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0a8ca4ddea200dba45afec0a108c7bc4f9cd9c74901ffadcdae9d245b6169eac",
+				"dweb:/ipfs/QmSxuBuoXE4zD3ESeWYZCd7Xrp3NhRyC95MBr4SqRD8UUE"
+			]
+		}
+	},
+	"version": 1
+}

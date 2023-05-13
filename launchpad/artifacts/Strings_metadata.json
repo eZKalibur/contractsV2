@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.13+commit.abaa5c0e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "String operations.",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"launchpad/ico.sol": "Strings"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"launchpad/ico.sol": {
+			"keccak256": "0x1682971126e3105932579dd1dad27f26dd4224abb0d2d39aeb09f9c3d0fccd8c",
+			"urls": [
+				"bzz-raw://e0a873f643436e9f1f6512a415f25e74b9ac62ec8160d9928158c85357585093",
+				"dweb:/ipfs/QmYohrpuWdBDaFgs3Kr4HkCvrbTeHW5idnQJBgAwNg4VnP"
+			]
+		}
+	},
+	"version": 1
+}
