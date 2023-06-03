@@ -1373,7 +1373,7 @@ contract OverflowICOPrivate is Ownable, ReentrancyGuard {
             "Maximum commitment should be greater or equal to minimum commitment"
         );
 
-        salesToken = IERC20(0x41d962eD9a2Af1B68844EF588e182A628a5FA6f3);
+        salesToken = IERC20(0x240f765Af2273B0CAb6cAff2880D6d8F8B285fa4);
         tokensToSell = _tokensToSell;
         ethersToRaise = _ethersToRaise;
         refundThreshold = _refundThreshold;
@@ -1382,7 +1382,7 @@ contract OverflowICOPrivate is Ownable, ReentrancyGuard {
         receiveTime = _receiveTime;
         minCommit = _minCommit;
         maxCommit = _maxCommit;
-        emissionToken = IERC20(0xE9F04E418f93Ae73387576e9ab0f8FDB7C88545D);
+        emissionToken = IERC20(0x11ef47783740B3F0c9736D54BE8eF8953C3Ead99);
         totalEmission = _totalEmission;
         burnAddress = _burnAddress;
         emissionTokenSaleAmount = _emissionTokenSaleAmount;
@@ -1544,7 +1544,6 @@ contract OverflowICOPrivate is Ownable, ReentrancyGuard {
             require(success, "Failed to transfer ether");
             if (ethersToRaise > totalCommitments) {
                 uint256 emissionTokensToBurn = (emissionTokenSaleAmount * (ethersToRaise - totalCommitments)) / ethersToRaise;
-                    emissionToken.safeTransfer(burnAddress, emissionTokensToBurn);
                 
                 uint256 tokensToBurn = (tokensToSell *
                     (ethersToRaise - totalCommitments)) / ethersToRaise;
